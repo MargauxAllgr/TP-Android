@@ -18,7 +18,5 @@ public class Main5Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main5);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
-
 }
