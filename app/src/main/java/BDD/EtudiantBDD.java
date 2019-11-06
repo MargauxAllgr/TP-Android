@@ -1,7 +1,10 @@
 package BDD;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+
+import modele.Etudiant;
 
 public class EtudiantBDD {
     private static final int VERSION_BDD = 1;
@@ -32,5 +35,24 @@ public class EtudiantBDD {
     }
     public SQLiteDatabase getDB(){
         return bdd;
+    }
+    public long ajouterEtudiant(Etudiant e){
+        ContentValues values = new ContentValues();
+        values.put(COL_NOM,e.getNom());
+        values.put(COL_PRENOM,e.getPrenom());
+        values.put(COL_SEXE,String.valueOf(e.getSexe()));
+        values.put(COL_DOMINANTE,e.getDominante());
+        return bdd.insert(TABLE,null,values);
+    }
+    public long majEtudiant(int id,Etudiant e){
+        ContentValues values = new ContentValues();
+        values.put(COL_NOM,e.getNom());
+        values.put(COL_PRENOM,e.getPrenom());
+        values.put(COL_SEXE,String.valueOf(e.getSexe()));
+        values.put(COL_DOMINANTE,e.getDominante());
+        return bdd.update(TABLE,values,COL_ID + " = " + id, null);
+    }
+    public long supprimerEtudiantParSonId(int id){
+        return bdd.insert(TABLE,COL_ID + " = " + id,null);
     }
 }
