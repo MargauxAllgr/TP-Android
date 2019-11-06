@@ -14,7 +14,7 @@ public class Etudiant {
         this.dominante=dominante;
     }
 
-    Etudiant(){
+    public Etudiant(){
         nom="";
         prenom="";
         sexe='n';
