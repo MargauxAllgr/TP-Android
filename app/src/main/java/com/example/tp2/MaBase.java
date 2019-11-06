@@ -13,12 +13,13 @@ public class MaBase extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE etudiants(id INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT NOT NULL,prenom TEXT NOT NULL,sexe VARCHAR(1) NOT NULL,dominante TEXT NOT NULL)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+        db.execSQL("DROP TABLE IF EXISTS etudiants");
+        onCreate(db);
     }
 }
