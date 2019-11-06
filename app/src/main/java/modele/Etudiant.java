@@ -7,7 +7,7 @@ public class Etudiant {
     String dominante;
 
 
-    Etudiant(String nom, String prenom, char sexe, String dominante){
+    public Etudiant(String nom, String prenom, char sexe, String dominante){
         this.nom = nom;
         this.prenom = prenom;
         this.sexe = sexe;
