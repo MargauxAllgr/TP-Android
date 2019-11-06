@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import modele.Etudiant;
 
 public class MonApplication {
-    static ArrayList<Etudiant> listeEtudiants = new ArrayList<>();
+    private static ArrayList<Etudiant> listeEtudiants = new ArrayList<>();
 
     public static ArrayList<Etudiant> getListeEtudiants() {
         return listeEtudiants;
@@ -14,4 +14,5 @@ public class MonApplication {
     public static void setListeEtudiants(ArrayList<Etudiant> listeE) {
         listeEtudiants = listeE;
     }
+
 }
