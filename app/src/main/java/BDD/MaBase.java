@@ -1,4 +1,4 @@
-package com.example.tp2;
+package BDD;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
